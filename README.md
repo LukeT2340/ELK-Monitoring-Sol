@@ -4,9 +4,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![Diagram](images/NetworkDiagram.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the "other_files"  file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the "playbooks and other files"  file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - /'playbooks and other files'/filebeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -23,8 +23,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
 - Load balances distribute network traffic across multiple machines. If one machine goes down, the other machines will take on the extra load and the server will remain functioning. This makes networks redundant and highly accessible.
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- Filebeat forwards and centralizes log files for monitoring and analysis. _TODO: What does Filebeat watch for?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to files and system logs.
+- Filebeat forwards and centralizes log files for monitoring and analysis. 
 - Metricbeat collects metrics of running services and resource usage for analysis. 
 
 The configuration details of each machine may be found below.
@@ -78,8 +78,8 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-
+- Using the system's logs, firebeat collects and centralizes system information.
+- Metricbeat monitors system services, processes, and resource usage for analysis.
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -88,7 +88,6 @@ SSH into the control node and follow the steps below:
 - Update the ansible.cfg file to include the ELK VM IP and add "ansible_python_interpreter=/usr/bin/python3" beside it.
 
 
-_TODO: Answer the following questions to fill in the blanks:_
 - Copy the ELK playbook to the /etc/ansible directory.
 - To run the playbook on a specific machine, include the machine's ip in the "/etc/hosts" file and modify the host name in the playbook file.
 - Run the playbook, and navigate to http://[Public IP of ELK machine]:5601/app/kibana  to check that the installation worked as expected.
