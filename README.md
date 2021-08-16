@@ -24,8 +24,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
 - Load balances distribute network traffic across multiple machines. If one machine goes down, the other machines will take on the extra load and the server will remain functioning. This makes networks redundant and highly accessible.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat forwards and centralizes log files for monitoring and analysis. _TODO: What does Filebeat watch for?_
+- Metricbeat collects metrics of running services and resource usage for analysis. 
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
